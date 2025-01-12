@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pantonny Pães - Pães artesanais deliciosos feitos com dedicação. Confira nossa vitrine!">
+    <meta name="keywords" content="pães, artesanais, Pantonny, padaria, pão caseiro, encomendas">
+    <meta name="author" content="Pantonny Pães">
+    <title>Pantonny Pães</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #8B0000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        nav a::after {
+            content: attr(data-count);
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: red;
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 50%;
+            display: none;
+        }
+
+        nav a#link-carrinho[data-count]::after {
+            display: inline;
+            
+        }
+
+        nav a:hover {
+            background-color: #006400;
+        }
+
+        .vitrine {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .produto {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .produto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .produto h3 {
+            color: #8B0000;
+            padding: 10px;
+        }
+
+        .produto p {
+            color: #006400;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .produto button {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .produto button:hover {
+            background-color: #006400;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        form h2 {
+            color: #8B0000;
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #006400;
+        }
+
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer img {
+            margin-bottom: 10px;
+        }
+
+        .mensagem {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .carrinho {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .carrinho h2 {
+            color: #8B0000;
+        }
+
+        .carrinho ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .carrinho li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .carrinho button {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .carrinho button:hover {
+            background-color: #006400;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 18px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pantonny Pães</h1>
+        <p>Pães feitos com dedicação direto para a sua mesa</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#vitrine">Vitrine</a>
+        <a href="#contato">Contato</a>
+        <a id="link-carrinho" href="#carrinho" data-count="">Carrinho</a>
+    </nav>
+
+    <section id="vitrine" class="vitrine">
+        <div class="produto">
+            <img src="IMG_0147.jpg" alt="Pão artesanal de parmesão e orégano com sabor especial">
+            <h3>Pão Parmesão & Orégano</h3>
+            <p>R$12,00</p>
+            <button onclick="adicionarAoCarrinho('Pão Parmesão & Orégano', 12)">Adicionar</button>
+        </div>
+        <div class="produto">
+            <img src="WhatsApp Image 2024-07-08 at 14.45.02 (8).jpeg" alt="Pão com queijo e ervas aromáticas">
+            <h3>Pão com Queijo e Ervas</h3>
+            <p>R$15,00</p>
+            <button onclick="adicionarAoCarrinho('Pão com Queijo e Ervas', 15)">Adicionar</button>
+        </div>
+        <div class="produto">
+            <img src="WhatsApp Image 2024-07-08 at 14.45.02 (11).jpeg" alt="Pão clássico caseiro da Pantonny">
+            <h3>Pão Clássico</h3>
+            <p>R$10,00</p>
+            <button onclick="adicionarAoCarrinho('Pão Clássico', 10)">Adicionar</button>
+        </div>
+    </section>
+
+    <section id="carrinho" class="carrinho">
+        <h2>Carrinho</h2>
+        <ul id="lista-carrinho"></ul>
+        <p id="total-itens">Total de itens: 0</p>
+        <p id="total-valor">Valor total: R$0,00</p>
+        <button onclick="esvaziarCarrinho()">Esvaziar Carrinho</button>
+    </section>
+
+    <section id="contato">
+        <form onsubmit="enviarWhatsApp(event)">
+            <h2>Contato</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+            <label for="cep">CEP:</label>
+            <input type="number" id="cep" name="cep" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <img src="baixados.png" alt="Mascote da Pantonny Pães" style="width: 100px;">
+        <p>&copy; 2025 Pantonny Pães - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        let carrinho = [];
+
+        function atualizarCarrinho() {
+            const listaCarrinho = document.getElementById('lista-carrinho');
+            const totalItens = document.getElementById('total-itens');
+            const totalValor = document.getElementById('total-valor');
+            const linkCarrinho = document.getElementById('link-carrinho');
+
+            listaCarrinho.innerHTML = '';
+            let total = 0;
+            let totalQuantidade = 0;
+
+            carrinho.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `${item.produto} (x${item.quantidade}) - R$${(item.preco * item.quantidade).toFixed(2)} 
+                <button onclick="removerItem(${index})">Remover</button>`;
+                listaCarrinho.appendChild(li);
+                total += item.preco * item.quantidade;
+                totalQuantidade += item.quantidade;
+            });
+
+            totalItens.innerText = `Total de itens: ${totalQuantidade}`;
+            totalValor.innerText = `Valor total: R$${total.toFixed(2)}`;
+            linkCarrinho.setAttribute('data-count', totalQuantidade);
+        }
+
+        function adicionarAoCarrinho(produto, preco) {
+            const existente = carrinho.find(item => item.produto === produto);
+            if (existente) {
+                existente.quantidade++;
+            } else {
+                carrinho.push({ produto, preco, quantidade: 1 });
+            }
+            atualizarCarrinho();
+        }
+
+        function removerItem(index) {
+            carrinho.splice(index, 1);
+            atualizarCarrinho();
+        }
+
+        function esvaziarCarrinho() {
+            carrinho = [];
+            atualizarCarrinho();
+        }
+
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const endereco = document.getElementById('endereco').value;
+            const bairro = document.getElementById('bairro').value;
+            const cep = document.getElementById('cep').value;
+
+            let mensagem = `Olá, meu nome é ${nome}. Gostaria de fazer um pedido para o endereço ${endereco}, bairro ${bairro}, CEP ${cep}.\n\nItens no carrinho:\n`;
+
+            carrinho.forEach(item => {
+                mensagem += `- ${item.produto} (x${item.quantidade}) - R$${(item.preco * item.quantidade).toFixed(2)}\n`;
+            });
+
+            const totalValor = carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
+            mensagem += `\nValor total: R$${totalValor.toFixed(2)}`;
+
+            const url = `https://api.whatsapp.com/send?phone=5511968559541&text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
