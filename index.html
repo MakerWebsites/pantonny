@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pantonny Pães - Pães artesanais deliciosos feitos com dedicação. Confira nossa vitrine!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Pantonny Pães - Pães artesanais deliciosos feitos com dedicação. Confira nossa vitrine!">
     <meta name="keywords" content="pães, artesanais, Pantonny, padaria, pão caseiro, encomendas">
     <meta name="author" content="Pantonny Pães">
     <title>Pantonny Pães</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+        crossorigin="anonymous"></script>
     <style>
-      body {
+     
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -25,6 +33,12 @@
             padding: 20px;
             text-align: center;
         }
+        #icons-first{
+            display: flex; justify-content: space-around;padding: 5px;
+            background-color: rgb(167, 0, 0);
+            color: white;
+        }
+
 
         nav {
             display: flex;
@@ -48,19 +62,19 @@
         nav a::after {
             content: attr(data-count);
             position: absolute;
-            top: 5px;
-            right: 5px;
+            top: -2px;
+            right: 0px;
             background: red;
             color: white;
-            font-size: 12px;
-            padding: 2px 6px;
+            font-size: 10px;
+            padding: 2px 4px;
             border-radius: 50%;
             display: none;
         }
 
         nav a#link-carrinho[data-count]::after {
             display: inline;
-            
+
         }
 
         nav a:hover {
@@ -136,7 +150,7 @@
         }
 
         form input {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin-top: 5px;
             border-radius: 5px;
@@ -159,8 +173,8 @@
         }
 
         footer {
-            background-color: #000000;
-            color: white;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
             text-align: center;
             padding: 20px;
         }
@@ -229,11 +243,19 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Pantonny Pães</h1>
         <p>Pães feitos com dedicação direto para a sua mesa</p>
     </header>
+
+    <section id="icons-first">
+        <i class="fas fa-map-marker-alt"></i> Embu-Guaçu
+        <i class="fas fa-bread-slice"></i> Padaria online
+        <i class="fas fa-motorcycle"></i> Delivery
+
+    </section>
 
     <nav>
         <a href="#sobre">Sobre</a>
@@ -245,7 +267,8 @@
     <section id="vitrine" class="vitrine">
         <div class="produto">
             <img src="IMG_0147.jpg" alt="Pão artesanal de parmesão e orégano com sabor especial">
-            <h3>Pão Parmesão & Orégano</h3>
+            <h3>Pão Parmesão & Orégano<sup style="color: #006400;">~300g</sup></h3>
+            <h3>congelado</h3>
             <p>R$12,00</p>
             <button onclick="adicionarAoCarrinho('Pão Parmesão & Orégano', 12)">Adicionar</button>
         </div>
@@ -285,6 +308,17 @@
             <button type="submit">Enviar</button>
         </form>
     </section>
+
+    <div style="padding: 4px; box-sizing: border-box;">
+        <div style="width: 100%; height: 0; padding-bottom: 56.25%; position: relative;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104605.53509718423!2d-46.91811418466244!3d-23.853054184501087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfb525924bc4bf%3A0x9d3e2907cfe36d11!2sEmbu-Gua%C3%A7u%2C%20SP%2C%2006900-000!5e1!3m2!1spt-BR!2sbr!4v1736688281565!5m2!1spt-BR!2sbr"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 10px;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      
 
     <footer>
         <img src="baixados.png" alt="Mascote da Pantonny Pães" style="width: 100px;">
@@ -359,4 +393,5 @@
         }
     </script>
 </body>
+
 </html>
