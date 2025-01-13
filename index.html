@@ -206,51 +206,89 @@
             margin: 20px 0;
         }
 
+        .video-section {
+            position: relative;
+            width: 100%;
+            height: 40vh;
+            /* Ajusta para cobrir toda a altura da tela */
+            overflow: hidden;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            object-fit: cover;
+            /* Faz o vídeo preencher a área sem distorção */
+        }
+
+        .video-overlay {
+            position: relative;
+            z-index: 2;
+            /* Garante que o conteúdo fique acima do vídeo */
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            /* Fundo escuro transparente para contraste */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
         .sobre {
-        background-color: #f9f9f9;
-        padding: 40px 20px;
-        font-family: 'Arial', sans-serif;
-    }
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            font-family: 'Arial', sans-serif;
+        }
 
-    .sobre .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+        .sobre .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    .sobre h2 {
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 20px;
-    }
+        .sobre h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .sobre h3 {
-        font-size: 1.8rem;
-        color: #006400;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+        .sobre h3 {
+            font-size: 1.8rem;
+            color: #006400;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-    .sobre p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #666;
-    }
+        .sobre p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #666;
+        }
 
-    .sobre ul {
-        list-style: none;
-        padding: 0;
-    }
+        .sobre ul {
+            list-style: none;
+            padding: 0;
+        }
 
-    .sobre ul li {
-        font-size: 1.2rem;
-        color: #333;
-        margin-bottom: 10px;
-    }
+        .sobre ul li {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-    .sobre ul li strong {
-        color: #006400;
-    }
+        .sobre ul li strong {
+            color: #006400;
+        }
 
         .carrinho {
             padding: 20px;
@@ -294,40 +332,40 @@
         }
 
         /* Call-to-Action Section */
-#cta {
-    background-color: #8B0000;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 40px 0;
-}
+        #cta {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
 
-.cta-conteudo h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
+        .cta-conteudo h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
 
-.cta-conteudo p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
+        .cta-conteudo p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
 
-.cta-botao {
-    background-color: #fff;
-    color: #000000;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+        .cta-botao {
+            background-color: #fff;
+            color: #000000;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-.cta-botao:hover {
-    background-color: #e5533d;
-    color: #fff;
-}
+        .cta-botao:hover {
+            background-color: #e5533d;
+            color: #fff;
+        }
 
 
         @media (max-width: 600px) {
@@ -342,75 +380,75 @@
         }
 
         .atacado {
-        background-color: #f0f0f0;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .atacado .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .atacado h2 {
-        font-size: 2.5rem;
-        color: #8B0000;
-        margin-bottom: 20px;
-    }
-
-    .atacado p {
-        font-size: 1.2rem;
-        color: #333;
-        margin-bottom: 20px;
-    }
-
-    .atacado-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        flex-wrap: wrap;
-    }
-
-    .atacado-info {
-        max-width: 600px;
-    }
-
-    .atacado-info h3 {
-        font-size: 1.8rem;
-        color: #006400;
-        margin-bottom: 10px;
-    }
-
-    .atacado-info button {
-        background-color: #8B0000;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        cursor: pointer;
-        font-size: 1.2rem;
-        border-radius: 5px;
-        margin-top: 20px;
-        transition: background-color 0.3s;
-    }
-
-    .atacado-info button:hover {
-        background-color: #006400;
-    }
-
-    .atacado-img img {
-        width: 100%;
-        max-width: 400px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (max-width: 768px) {
-        .atacado-container {
-            flex-direction: column;
+            background-color: #f0f0f0;
+            padding: 40px 20px;
             text-align: center;
         }
-    }
+
+        .atacado .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .atacado h2 {
+            font-size: 2.5rem;
+            color: #8B0000;
+            margin-bottom: 20px;
+        }
+
+        .atacado p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .atacado-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .atacado-info {
+            max-width: 600px;
+        }
+
+        .atacado-info h3 {
+            font-size: 1.8rem;
+            color: #006400;
+            margin-bottom: 10px;
+        }
+
+        .atacado-info button {
+            background-color: #8B0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .atacado-info button:hover {
+            background-color: #006400;
+        }
+
+        .atacado-img img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .atacado-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -427,6 +465,17 @@
 
     </section>
 
+    <section class="video-section">
+        <video autoplay muted loop class="background-video">
+            <source src="video-pao-3s.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos em HTML5.
+        </video>
+        <div class="video-overlay">
+            <h1>Bem-vindo à Nossa Padaria Online</h1>
+            <p>Descubra nossos produtos frescos e deliciosos!</p>
+        </div>
+    </section>
+
     <nav>
         <a href="#sobre">Sobre</a>
         <a href="#vitrine">Vitrine</a>
@@ -437,20 +486,20 @@
     <section id="vitrine" class="vitrine">
         <div class="produto">
             <img src="IMG_0147.jpg" alt="Pão artesanal de parmesão e orégano com sabor especial">
-            <h3>Pão Parmesão & Orégano</h3>
-            <p>R$12,00</p>
+            <h3>Pão Parmesão & Orégano Congelado</h3>
+            <p>R$14,00</p>
             <button onclick="adicionarAoCarrinho('Pão Parmesão & Orégano', 12)">Adicionar</button>
         </div>
         <div class="produto">
             <img src="WhatsApp Image 2024-07-08 at 14.45.02 (8).jpeg" alt="Pão com queijo e ervas aromáticas">
-            <h3>Pão com Queijo e Ervas</h3>
-            <p>R$15,00</p>
+            <h3>Pão Clássico</h3>
+            <p>R$12,00</p>
             <button onclick="adicionarAoCarrinho('Pão com Queijo e Ervas', 15)">Adicionar</button>
         </div>
         <div class="produto">
             <img src="WhatsApp Image 2024-07-08 at 14.45.02 (11).jpeg" alt="Pão clássico caseiro da Pantonny">
-            <h3>Pão Clássico</h3>
-            <p>R$10,00</p>
+            <h3>Pão Com Coco Ralado</h3>
+            <p>R$8,00</p>
             <button onclick="adicionarAoCarrinho('Pão Clássico', 10)">Adicionar</button>
         </div>
     </section>
@@ -458,40 +507,54 @@
     <section id="cta">
         <div class="cta-conteudo">
             <h2>Saboreie o Melhor da Nossa Padaria!</h2>
-            <p>Os nossos pães fresquinhos são feitos com os melhores ingredientes, oferecendo sabor e qualidade em cada mordida. Não perca tempo e faça já o seu pedido!</p>
-            <a href="#produtos" class="cta-botao">Faça o Seu Pedido Agora</a>
+            <p>Os nossos pães fresquinhos são feitos com os melhores ingredientes, oferecendo sabor e qualidade em cada
+                mordida. Não perca tempo e faça já o seu pedido!</p>
+            <a href="#vitrine" class="cta-botao">Faça o Seu Pedido Agora</a>
         </div>
     </section>
-    
 
     <section class="sobre" id="sobre">
         <div class="container">
             <h2>Sobre a Pantonny Pães</h2>
-            <p>Na <strong>Pantonny Pães</strong>, a nossa missão é trazer até você o sabor incomparável dos melhores pães, com a conveniência de uma padaria online de confiança. Fundada com o objetivo de oferecer mais do que produtos de panificação, buscamos criar experiências culinárias que encantam e atendem as necessidades dos nossos clientes, com qualidade e praticidade.</p>
-    
+            <p>Na <strong>Pantonny Pães</strong>, a nossa missão é trazer até você o sabor incomparável dos melhores
+                pães, com a conveniência de uma padaria online de confiança. Fundada com o objetivo de oferecer mais do
+                que produtos de panificação, buscamos criar experiências culinárias que encantam e atendem as
+                necessidades dos nossos clientes, com qualidade e praticidade.</p>
+
             <h3>Nosso Compromisso</h3>
-            <p>Acreditamos que cada pão é uma obra de arte, e isso se reflete em nosso compromisso com a qualidade. Todos os nossos produtos são feitos com ingredientes de primeira linha, sem conservantes, para garantir que você receba um pão fresco, saboroso e saudável. A Pantonny Pães está empenhada em oferecer um serviço de excelência, com entregas rápidas e um atendimento ao cliente impecável.</p>
-    
+            <p>Acreditamos que cada pão é uma obra de arte, e isso se reflete em nosso compromisso com a qualidade.
+                Todos os nossos produtos são feitos com ingredientes de primeira linha, sem conservantes, para garantir
+                que você receba um pão fresco, saboroso e saudável. A Pantonny Pães está empenhada em oferecer um
+                serviço de excelência, com entregas rápidas e um atendimento ao cliente impecável.</p>
+
             <h3>O que nos diferencia</h3>
             <ul>
-                <li><strong>Qualidade Premium:</strong> Pães feitos com ingredientes selecionados e processos artesanais.</li>
-                <li><strong>Entrega Rápida e Segura:</strong> Garantimos que seus pedidos cheguem fresquinhos no conforto da sua casa.</li>
-                <li><strong>Atendimento Personalizado:</strong> Estamos sempre prontos para ajudar, seja com dúvidas sobre nossos produtos ou para uma experiência de compra sem stress.</li>
+                <li><strong>Qualidade Premium:</strong> Pães feitos com ingredientes selecionados e processos
+                    artesanais.</li>
+                <li><strong>Entrega Rápida e Segura:</strong> Garantimos que seus pedidos cheguem fresquinhos no
+                    conforto da sua casa.</li>
+                <li><strong>Atendimento Personalizado:</strong> Estamos sempre prontos para ajudar, seja com dúvidas
+                    sobre nossos produtos ou para uma experiência de compra sem stress.</li>
             </ul>
-    
+
             <h3>Nossa Visão</h3>
-            <p>Ser a padaria online preferida de todos, trazendo conveniência, qualidade e um toque especial para cada refeição. Queremos que nossos pães façam parte dos melhores momentos do seu dia, seja no café da manhã, lanche da tarde ou em qualquer ocasião especial.</p>
-    
+            <p>Ser a padaria online preferida de todos, trazendo conveniência, qualidade e um toque especial para cada
+                refeição. Queremos que nossos pães façam parte dos melhores momentos do seu dia, seja no café da manhã,
+                lanche da tarde ou em qualquer ocasião especial.</p>
+
             <h3>Junte-se à Pantonny Pães</h3>
-            <p>Descubra o prazer de saborear um pão artesanal feito com carinho e atenção. Faça seu pedido online e sinta a diferença da qualidade Pantonny Pães na sua mesa.</p>
+            <p>Descubra o prazer de saborear um pão artesanal feito com carinho e atenção. Faça seu pedido online e
+                sinta a diferença da qualidade Pantonny Pães na sua mesa.</p>
         </div>
     </section>
+    
 
     <section id="cta">
         <div class="cta-conteudo">
             <h2>Transforme Seu Dia com Nossos Produtos Fresquinhos!</h2>
-            <p>Não perca a oportunidade de saborear pães, bolos e muito mais, feitos com carinho e ingredientes de qualidade. Faça seu pedido agora mesmo e aproveite a entrega rápida!</p>
-            <a href="#produtos" class="cta-botao">Compre Agora e Delicie-se</a>
+            <p>Não perca a oportunidade de saborear pães, bolos e muito mais, feitos com carinho e ingredientes de
+                qualidade. Faça seu pedido agora mesmo e aproveite a entrega rápida!</p>
+            <a href="#vitrine" class="cta-botao">Compre Agora e Delicie-se</a>
         </div>
     </section>
 
@@ -506,11 +569,13 @@
     <section id="atacado" class="atacado">
         <div class="container">
             <h2>Atacado de Pães</h2>
-            <p>Faça seu pedido de pães em grandes quantidades e garanta os melhores preços para seu negócio ou evento.</p>
+            <p>Faça seu pedido de pães em grandes quantidades e garanta os melhores preços para seu negócio ou evento.
+            </p>
             <div class="atacado-container">
                 <div class="atacado-info">
                     <h3>Quantidade mínima: 10 pães</h3>
-                    <p>Descontos especiais para compras em atacado! Escolha entre uma variedade de pães frescos e artesanais, feitos com ingredientes de alta qualidade.</p>
+                    <p>Descontos especiais para compras em atacado! Escolha entre uma variedade de pães frescos e
+                        artesanais, feitos com ingredientes de alta qualidade.</p>
                     <button onclick="window.location.href='#vitrine'">Escolher Pães</button>
                 </div>
                 <div class="atacado-img">
@@ -547,7 +612,8 @@
 
 
     <footer>
-        <img src="baixados.png" alt="Mascote da Pantonny Pães" style="width: 50px; background-color: #00000050; border-radius: 10px;">
+        <img src="baixados.png" alt="Mascote da Pantonny Pães"
+            style="width: 50px; background-color: #00000050; border-radius: 10px;">
         <p>&copy; 2025 Pantonny Pães - Todos os direitos reservados</p>
         <a href="mailto:pantonnypaes@gmail.com">Entre em Contato Conosco</a>
         <address>
@@ -556,7 +622,7 @@
             CEP: 06900-000<br>
             <a href="https://www.google.com/maps?q=Embu-Guaçu,SP" target="_blank">Ver no Google Maps</a>
         </address>
-        
+
         <h6>developed by Antolin A. Junior</h6>
     </footer>
 
