@@ -1,0 +1,22 @@
+{
+    "name": "Pantonny Pães",
+    "short_name": "Pantonny",
+    "description": "Pães artesanais deliciosos feitos com dedicação",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#8B0000",
+    "icons": [
+      {
+        "src": "favicon.png", 
+        "sizes": "192x192", 
+        "type": "image/png"
+      },
+      {
+        "src": "favicon.png", 
+        "sizes": "512x512", 
+        "type": "image/png"
+      }
+    ]
+  }
+  
