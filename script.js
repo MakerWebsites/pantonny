@@ -5,6 +5,7 @@ function atualizarCarrinho() {
     const totalItens = document.getElementById('total-itens');
     const totalValor = document.getElementById('total-valor');
     const linkCarrinho = document.getElementById('link-carrinho');
+    const mensagem = document.getElementById('mensagem');
 
     listaCarrinho.innerHTML = '';
     let total = 0;
@@ -22,6 +23,7 @@ function atualizarCarrinho() {
     totalItens.innerText = `Total de itens: ${totalQuantidade}`;
     totalValor.innerText = `Valor total: R$${total.toFixed(2)}`;
     linkCarrinho.setAttribute('data-count', totalQuantidade);
+    
 }
 
 function adicionarAoCarrinho(produto, preco) {
@@ -31,7 +33,16 @@ function adicionarAoCarrinho(produto, preco) {
     } else {
         carrinho.push({ produto, preco, quantidade: 1 });
     }
+    adicionar();
     atualizarCarrinho();
+}
+
+function adicionar() {
+    const mensagem = document.getElementById('mensagem');
+    mensagem.style.display = 'block'; // Mostra a mensagem
+    setTimeout(() => {
+        mensagem.style.display = 'none'; // Esconde a mensagem após 3 segundos
+    }, 3000);
 }
 
 function removerItem(index) {
