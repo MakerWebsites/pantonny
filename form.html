@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinatura de Pães - Pantonny Pães</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pantonny Pães</h1>
+        <p>Pães feitos com dedicação direto para a sua mesa</p>
+    </header>
+    <section class="signup-form">
+        <div class="container">
+            <form id="form">
+                <a href="index.html">Voltar</a>
+                <h1>Cadastro de novos clientes ao sistema.</h1>
+                <h2>Adicione os dados de cadastro:</h2>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+            
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+            
+                <label for="phone">Telefone:</label>
+                <input type="text" id="phone" name="phone" required placeholder="Digite seu telefone">
+            
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required placeholder="Digite seu CEP">
+                <button type="button" id="search-cep">Buscar CEP</button>
+            
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required placeholder="Endereço completo">
+            
+                <label for="neighborhood">Bairro:</label>
+                <input type="text" id="neighborhood" name="neighborhood" required placeholder="Digite o bairro">
+            
+                <label for="number">Número:</label>
+                <input type="text" id="number" name="number" required placeholder="Número da residência">
+            
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" required placeholder="Cidade e Estado">
+            
+                <label for="plan">Escolha seu Plano:</label>
+                <select id="plan" name="plan" required>
+                    <option value="">Selecione um plano</option>
+                    <option value="semanal">Plano Semanal - 5 pães por R$36,00</option>
+                    <option value="mensal">Plano Mensal - 15 pães por R$105,00</option>
+                    <option value="trimestral">Plano Trimestral - 45 pães por R$297,00</option>
+                    <option value="nao-assinante">Quero fazer Encomendas, sem assinatura.</option>
+                </select>
+            
+                <div id="benefits"></div>
+            
+                <button type="button" id="send-to-whatsapp" class="cta-button">Enviar para WhatsApp</button>
+            </form>            
+            
+        </div>
+    </section>
+
+    <footer>
+        <h6 style="text-align: center;">&copy; Pantonny-todos os direitos reservados.</h6>
+    </footer>
+
+    <script src="form.js"></script>
+</body>
+</html>
